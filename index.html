@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Untuk Ustadzah Hanan & Ustadzah Mela</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#04121c;--gold:#ffd86b;--mint:#fff6dc;--rose:#ffd86b;--cream:#fff6dc;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html,body{height:100%}
+body{background:var(--ink);color:var(--cream);font-family:'Lora',Georgia,serif;overflow:hidden;position:relative}
+.sky{position:fixed;inset:0;background:
+radial-gradient(ellipse 60% 40% at 50% 100%,rgba(0,255,230,.28),transparent 70%),
+radial-gradient(circle at 80% 14%,rgba(255,236,170,.25),transparent 18%),
+linear-gradient(#020a14,#07243a 60%,#0b3b45)}
+.moon{position:fixed;top:7%;right:9%;width:9vmin;height:9vmin;min-width:46px;min-height:46px;border-radius:50%;
+background:radial-gradient(circle at 35% 35%,#fffbe8,#ffe9a8 70%);box-shadow:0 0 40px 10px rgba(255,233,168,.45);animation:fade 3s .3s backwards}
+.star{position:fixed;width:2px;height:2px;border-radius:50%;background:#fff;animation:tw var(--t) ease-in-out infinite alternate}
+@keyframes tw{from{opacity:.1}to{opacity:1;transform:scale(1.8)}}
+@keyframes fade{from{opacity:0}}
+
+/* teks utama */
+.hero{position:fixed;left:0;right:0;top:7%;text-align:center;z-index:30;padding:0 5vw;text-shadow:0 2px 14px rgba(2,10,20,.95),0 0 3px rgba(2,10,20,.8)}
+.hero::before{content:"";position:absolute;inset:-8% 0 -6%;z-index:-1;background:radial-gradient(ellipse at center,rgba(2,10,20,.75),transparent 72%)}
+.hero small{display:block;font-style:italic;font-size:clamp(16px,2.8vmin,22px);color:var(--cream);animation:rise 1.6s 4.2s backwards}
+.hero h1{font-family:'Lora',Georgia,serif;font-weight:700;line-height:1.2;font-size:clamp(28px,7.5vmin,72px);margin:.2em 0;color:var(--gold);animation:rise 2s 4.6s backwards}
+.hero h1 span{display:block}
+.hero h1 i{font-style:normal;font-weight:400;font-size:.6em;color:var(--cream)}
+.hero p{max-width:34ch;margin:.4em auto 1em;font-size:clamp(16px,2.6vmin,21px);line-height:1.6;color:var(--cream);animation:rise 2s 5.4s backwards}
+@keyframes rise{from{opacity:0;transform:translateY(16px);filter:blur(6px)}}
+button{font:600 clamp(14px,2.2vmin,17px) 'Lora',serif;cursor:pointer;color:#2a1a00;border:0;border-radius:999px;padding:.8em 1.7em;
+background:linear-gradient(135deg,#fff0a8,var(--gold) 55%,#ffb347);box-shadow:0 0 26px rgba(255,216,107,.5);animation:rise 2s 6.2s backwards,pulse 2.6s 8s infinite;transition:transform .2s}
+button:hover{transform:scale(1.06)}button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@keyframes pulse{50%{box-shadow:0 0 44px 6px rgba(255,216,107,.75)}}
+
+/* taman */
+.garden{position:fixed;left:0;right:0;bottom:0;height:70%;font-size:1vmin;z-index:10}
+@media(orientation:portrait){.garden{font-size:1.7vmin;height:60%}}
+.fl{position:absolute;bottom:3em;left:var(--x);width:0;height:var(--h);transform-origin:bottom center;animation:sway 5s ease-in-out infinite alternate;animation-delay:var(--d);--c:calc(var(--s,1))}
+@keyframes sway{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+.stem{position:absolute;bottom:0;left:-.6em;width:1.2em;height:100%;border-radius:1em;transform-origin:bottom;
+background:linear-gradient(to top,transparent,#14757a,#39c6d6);animation:grow 2.6s var(--d) cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes grow{from{transform:scaleY(0)}}
+.lf{position:absolute;width:4.5em;height:6.5em;background:linear-gradient(to top,rgba(20,117,122,.3),#39c6d6);border-radius:0 100% 0 100%;
+animation:pop 1s calc(var(--d) + 1.8s) backwards;transform-origin:left bottom}
+.lf.r{left:.4em;transform:rotate(60deg)}
+.lf.l{right:.4em;border-radius:100% 0 100% 0;transform:rotate(-60deg);transform-origin:right bottom}
+@keyframes pop{from{opacity:0;scale:0}}
+.head{position:absolute;top:0;left:0;scale:var(--s,1);animation:bloom 2s calc(var(--d) + 1.8s) cubic-bezier(.3,1.5,.5,1) backwards}
+@keyframes bloom{from{scale:0;opacity:0}}
+.head::before{content:"";position:absolute;left:-12em;top:-12em;width:24em;height:24em;border-radius:50%;background:radial-gradient(var(--c1),transparent 65%);opacity:.45;animation:glow 3s ease-in-out infinite alternate}
+@keyframes glow{to{opacity:.8;transform:scale(1.15)}}
+.p{position:absolute;left:-3.4em;top:-11.5em;width:6.8em;height:11.5em;border-radius:50% 50% 50% 50%/75% 75% 25% 25%;transform-origin:50% 100%;
+transform:rotate(calc(var(--i)*45deg));background:linear-gradient(to top,var(--c2),var(--c1));box-shadow:inset 0 0 2em rgba(255,255,255,.55);opacity:.92}
+.p.in{width:5em;left:-2.5em;top:-8em;height:8em;transform:rotate(calc(var(--i)*45deg + 22.5deg));filter:brightness(1.15);opacity:.95}
+.core{position:absolute;left:-2.6em;top:-1.6em;width:5.2em;height:3.2em;border-radius:50%;background:radial-gradient(#fff6b0,#ffc400);box-shadow:0 0 2em #ffd54a;transform:translateY(-.4em)}
+.grass{position:absolute;bottom:2em;width:.9em;border-radius:50% 50% 0 0;transform-origin:bottom;background:linear-gradient(to top,#0a4f55,#27c3b8);animation:gs var(--t) ease-in-out infinite alternate,grow 2s var(--d) backwards}
+@keyframes gs{from{rotate:-6deg}to{rotate:7deg}}
+.ground{position:absolute;left:0;right:0;bottom:0;height:8em;background:linear-gradient(transparent,#031014 60%)}
+
+/* kunang-kunang & hati */
+.ff{position:fixed;width:.8vmin;height:.8vmin;min-width:5px;min-height:5px;border-radius:50%;background:var(--c);box-shadow:0 0 12px 3px var(--c);z-index:20;pointer-events:none;
+animation:fly var(--t) linear infinite,blink 2s ease-in-out infinite alternate;animation-delay:var(--d)}
+@keyframes fly{from{transform:translate(0,0)}to{transform:translate(var(--dx),-90vh)}}
+@keyframes blink{from{opacity:.2}to{opacity:1}}
+.heart{position:fixed;z-index:60;pointer-events:none;font-size:22px;animation:up 1.8s ease-out forwards}
+@keyframes up{to{transform:translate(var(--dx),-140px) scale(1.6);opacity:0}}
+
+/* kartu pesan */
+.veil{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:rgba(2,10,20,.72);backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .5s}
+.veil.on{opacity:1;pointer-events:auto}
+.card{max-width:520px;max-height:86vh;overflow:auto;padding:clamp(22px,5vw,40px);border-radius:26px;text-align:center;
+background:rgba(6,22,36,.95);border:1px solid rgba(255,216,107,.5);box-shadow:0 0 60px rgba(255,216,107,.2);
+transform:translateY(30px) scale(.94);transition:transform .6s cubic-bezier(.2,1.3,.4,1)}
+.veil.on .card{transform:none}
+.card h2{font-family:'Lora',serif;font-weight:700;font-size:clamp(22px,6vw,30px);color:var(--gold);margin-bottom:.6em}
+.card p{line-height:1.75;font-size:clamp(16px,4vw,18px);margin-bottom:.9em;color:var(--cream)}
+.card .dua{font-style:italic;color:var(--gold)}
+.card .ttd{font-style:italic;font-weight:600;font-size:20px;color:var(--gold);margin:.2em 0 1em}
+.card button{animation:none;font-size:15px;padding:.7em 1.5em}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;animation-delay:0s!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<div class="sky"></div><div class="moon"></div>
+<audio id="music" src="sekian.mp4" preload="none" loop></audio>
+
+<div class="hero">
+  <small>Dengan penuh cinta dan doa untuk</small>
+  <h1><span>Ustadzah Hanan</span><i>&amp;</i><span>Ustadzah Mela</span></h1>
+  <p>Terima kasih telah menumbuhkan kami, seperti taman yang tak pernah lelah Ustadzah rawat.</p>
+  <button id="open">Buka pesan kami 💌</button>
+</div>
+
+<div class="garden" id="garden"><div class="ground"></div></div>
+
+<div class="veil" id="veil" role="dialog" aria-modal="true" aria-label="Pesan perpisahan">
+  <div class="card">
+    <h2>Teruntuk Ustadzah Tercinta</h2>
+    <p>Ustadzah Hanan dan Ustadzah Mela, terima kasih atas setiap ilmu, kesabaran, dan doa yang tak pernah putus. Terima kasih telah menuntun kami dengan penuh kasih sayang, bahkan di hari-hari ketika kami sulit diatur.</p>
+    <p>Mohon maaf atas segala salah dan khilaf kami selama ini. Apa yang Ustadzah tanam akan terus tumbuh di hati kami.</p>
+    <p class="dua">Semoga Allah membalas semua kebaikan Ustadzah dengan balasan terbaik, melapangkan setiap langkah, dan mempertemukan kita kembali dalam kebaikan.</p>
+    <div class="ttd">Murid-muridmu 🤍</div>
+    <button id="close">Tutup</button>
+  </div>
+</div>
+
+<script>
+const $=(t,c,p,s)=>{const e=document.createElement(t);if(c)e.className=c;if(s)e.setAttribute('style',s);p&&p.appendChild(e);return e};
+const R=(a,b)=>a+Math.random()*(b-a);
+// bintang
+for(let i=0;i<90;i++)$('div','star',document.body,`left:${R(0,100)}%;top:${R(0,60)}%;--t:${R(1.5,4)}s;animation-delay:${R(0,3)}s`);
+// bunga
+const g=document.getElementById('garden');
+[{x:14,h:30,d:.6,s:.7,a:'#d9c2ff',b:'#7c4dff'},
+ {x:30,h:46,d:.2,s:1,a:'#a7ffee',b:'#1fb8c9'},
+ {x:50,h:58,d:.5,s:1.2,a:'#ffd1f0',b:'#e0489a'},
+ {x:70,h:44,d:.9,s:1,a:'#fff3a8',b:'#f59e0b'},
+ {x:86,h:32,d:1.2,s:.7,a:'#ffc9b0',b:'#ff6a5c'}].forEach(f=>{
+  const fl=$('div','fl',g,`--x:${f.x}%;--h:${f.h}em;--d:${f.d}s;--s:${f.s}`);
+  const st=$('div','stem',fl);
+  $('div','lf r',fl,`bottom:${f.h*.28}em`);$('div','lf l',fl,`bottom:${f.h*.5}em`);
+  const h=$('div','head',fl,`--c1:${f.a};--c2:${f.b}`);
+  for(let i=0;i<8;i++)$('div','p',h,`--i:${i}`);
+  for(let i=0;i<8;i++)$('div','p in',h,`--i:${i}`);
+  $('div','core',h);
+});
+// Musik dimulai saat bunga pertama mekar. Jika autoplay diblokir browser,
+// percobaan ulang dilakukan saat pengguna membuka pesan.
+const music=document.getElementById('music');
+let musicStarted=false;
+let musicPending=false;
+function playMusic(){
+  if(musicStarted||musicPending)return;
+  musicPending=true;
+  music.play().then(()=>{musicStarted=true;musicPending=false}).catch(error=>{
+    musicPending=false;
+    if(error.name!=='NotAllowedError')console.error('Musik tidak dapat diputar:',error);
+  });
+}
+g.addEventListener('animationstart',e=>{
+  if(e.target.classList.contains('head')&&e.animationName==='bloom')playMusic();
+});
+// rumput
+for(let i=0;i<60;i++)$('div','grass',g,`left:${R(0,100)}%;height:${R(5,16)}em;--t:${R(1.5,3.2)}s;--d:${R(2,4)}s`);
+// kunang-kunang
+['#ffe95c','#7ff6ff','#ffb7e0'].forEach((c,k)=>{for(let i=0;i<12;i++)$('div','ff',document.body,`--c:${c};left:${R(0,100)}%;bottom:${R(0,25)}%;--dx:${R(-15,15)}vw;--t:${R(8,16)}s;--d:${R(0,10)}s`)});
+// pesan
+const v=document.getElementById('veil');
+document.getElementById('open').onclick=()=>{playMusic();v.classList.add('on');burst(innerWidth/2,innerHeight/2,14)};
+document.getElementById('close').onclick=()=>v.classList.remove('on');
+v.onclick=e=>{if(e.target===v)v.classList.remove('on')};
+addEventListener('keydown',e=>{if(e.key==='Escape')v.classList.remove('on')});
+// hati saat disentuh
+function burst(x,y,n){for(let i=0;i<n;i++){const h=$('div','heart',document.body,`left:${x}px;top:${y}px;--dx:${R(-90,90)}px`);h.textContent=['💛','🤍','🌸','✨','💖'][i%5];setTimeout(()=>h.remove(),1900)}}
+addEventListener('pointerdown',e=>{if(!e.target.closest('button,.card'))burst(e.clientX,e.clientY,5)});
+</script>
+</body>
+</html>
